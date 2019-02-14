@@ -2,6 +2,7 @@ from tkinter import *
 import tkinter.ttk as ttk
 import sys
 import Create_table_widget as twidget
+from tkinter import filedialog
 
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 years = [2018, 2019]
@@ -44,6 +45,13 @@ def display_results(window, subwindow):
     manager.add_row(values)
 
 
+def upload_file(window):
+
+    # window.withdraw()
+    file = filedialog.askopenfilename()
+    return file
+
+
 def make_center():
 
     display_width = main_window.winfo_screenwidth()
@@ -60,10 +68,32 @@ def service_num_validate(num):
     pass
 
 
+def tabTwo(window):
+
+    tabTwo = Toplevel(window)
+    tabTwo.title('Batch download options')
+    tabTwo.geometry('300x300+550+140')
+    tabTwo.attributes('-toolwindow', 1)
+    tabTwo.grab_set()
+    tabTwo.resizable(0, 0)
+
+    global batch_pass
+    global batch_month
+    global batch_year
+
+    batch_pass = StringVar()
+    batch_month = StringVar()
+    batch_year = IntVar()
+
+    Message(tabTwo, text='*This Option will work only \n if password is same for all service', justify=LEFT, width=300).pack(side=TOP, fill=X, expand=1)
+    Label(tabTwo, text='Upload .txt file here').pack(side=LEFT)
+    Button(tabTwo, text='upload', command=lambda: upload_file(tabTwo)).pack(side=LEFT)
+
+
 def tabOne(window):
 
     global service_num
-    global service_pass
+    global tabOne_service_pass
     global service_month
     global service_year
     global tabOneButton
@@ -72,16 +102,17 @@ def tabOne(window):
     tabOne.title('Single Service download')
     tabOne.geometry('200x300+550+140')
     tabOne.attributes('-toolwindow', 1)
+    tabOne.resizable(0, 0)
     tabOne.grab_set()
     service_num = StringVar(tabOne)
-    service_pass = StringVar(tabOne)
+    tabOne_service_pass = StringVar(tabOne)
     service_month = StringVar(tabOne)
     service_year = IntVar(tabOne)
 
     Label(tabOne, text='Enter Service number').pack(side=TOP)
     sNumber = Entry(tabOne, width=30, textvariable=service_num)
     sNumber.pack(side=TOP)
-    Label(tabOne, text='Enter Password', textvariable=service_pass).pack(side=TOP)
+    Label(tabOne, text='Enter Password', textvariable=tabOne_service_pass).pack(side=TOP)
     pword = Entry(tabOne, width=30, show='*')
     pword.pack(side=TOP)
     service_month.set('January')
@@ -113,7 +144,7 @@ def application():
     menubar.add_cascade(label='File', menu=filemenu)
 
     menubar.add_command(label='Single Download', command=lambda: tabOne(main_window))
-    menubar.add_command(label='Batch Download')
+    menubar.add_command(label='Batch Download', command=lambda: tabTwo(main_window))
     menubar.add_command(label='Show')
     menubar.add_command(label='About', command=show_about)
 
