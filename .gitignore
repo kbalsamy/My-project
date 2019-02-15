@@ -1,1 +1,4 @@
 geckodriver.exe
+geckodriver.log
+tests.py
+failed summary.txt

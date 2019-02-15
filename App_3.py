@@ -3,11 +3,12 @@ import tkinter.ttk as ttk
 import sys
 import Create_table_widget as twidget
 from tkinter import filedialog
+import api
 
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 years = [2018, 2019]
 # for testing the values
-values = ['079204720584', 171, 333, 153, 648, 828, 46962, 15246, 5130, 163125, 57006, 46791, 14913, 4977, 162477, 56178]
+# values = ['079204720584', 171, 333, 153, 648, 828, 46962, 15246, 5130, 163125, 57006, 46791, 14913, 4977, 162477, 56178]
 
 
 def show_about():
@@ -42,7 +43,7 @@ def display_results(window, subwindow):
     manager.exim_table('Import Units', single_header=False)
     manager.exim_table('Export Units', single_header=False)
     manager.exim_table('Difference', single_header=False)
-    manager.add_row(values)
+    manager.add_row(api.scrape(service_num.get(), tabOne_service_pass.get(), service_month.get(), service_year.get()))
 
 
 def upload_file(window):
@@ -112,8 +113,8 @@ def tabOne(window):
     Label(tabOne, text='Enter Service number').pack(side=TOP)
     sNumber = Entry(tabOne, width=30, textvariable=service_num)
     sNumber.pack(side=TOP)
-    Label(tabOne, text='Enter Password', textvariable=tabOne_service_pass).pack(side=TOP)
-    pword = Entry(tabOne, width=30, show='*')
+    Label(tabOne, text='Enter Password').pack(side=TOP)
+    pword = Entry(tabOne, width=30, show='*', textvariable=tabOne_service_pass)
     pword.pack(side=TOP)
     service_month.set('January')
     OptionMenu(tabOne, service_month, *months).pack(side=TOP, pady=10)
@@ -204,5 +205,5 @@ def login_frame():
     login_window.mainloop()
 
 
-# login_frame()
-application()
+login_frame()
+# application()

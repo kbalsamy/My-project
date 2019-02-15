@@ -38,7 +38,7 @@ class Table_creator(Frame):
         s = StringVar()
         s.set(values[0])
         Entry(self.row, textvariable=s, state='readonly', bd=1, relief=SOLID, width=32).pack(side=LEFT, fill=BOTH, expand=1)
-        for val in values[1:]:
+        for val in values[1]:
             v = IntVar()
             v.set(val)
             Entry(self.row, textvariable=v, state='readonly', bd=1, relief=SOLID, width=5).pack(side=LEFT, fill=BOTH, expand=1)
