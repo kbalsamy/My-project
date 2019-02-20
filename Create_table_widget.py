@@ -35,27 +35,19 @@ class Table_creator(Frame):
 
     def add_row(self, values):
 
-        s = StringVar()
-        s.set(values[0])
-        Entry(self.row, textvariable=s, state='readonly', bd=1, relief=SOLID, width=32).pack(side=LEFT, fill=BOTH, expand=1)
-        for val in values[1]:
-            v = IntVar()
-            v.set(val)
-            Entry(self.row, textvariable=v, state='readonly', bd=1, relief=SOLID, width=5).pack(side=LEFT, fill=BOTH, expand=1)
-        self.is_row = True
-
-
-def main():
-    values = ['079204720584', 171, 333, 153, 648, 828, 46962, 15246, 5130, 163125, 57006, 46791, 14913, 4977, 162477, 56178]
-
-    root = Tk()
-    manger = Table_creator(root)
-    manger.exim_table('Service Number')
-    manger.exim_table('Import Units', single_header=False)
-    manger.exim_table('Export Units', single_header=False)
-    manger.exim_table('Difference', single_header=False)
-    manger.add_row(values)
-    root.mainloop()
+        if len(values) > 2:
+            status = StringVar()
+            status.set(values)
+            Entry(self.row, textvariable=status, state='readonly', bd=1, relief=SOLID, width=32).pack(side=LEFT, fill=BOTH, expand=1)
+        else:
+            s = StringVar()
+            s.set(values[0])
+            Entry(self.row, textvariable=s, state='readonly', bd=1, relief=SOLID, width=32).pack(side=LEFT, fill=BOTH, expand=1)
+            for val in values[1]:
+                v = IntVar()
+                v.set(val)
+                Entry(self.row, textvariable=v, state='readonly', bd=1, relief=SOLID, width=5).pack(side=LEFT, fill=BOTH, expand=1)
+            self.is_row = True
 
 
 # main()
