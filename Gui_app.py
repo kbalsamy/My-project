@@ -12,6 +12,7 @@ import threading
 import time
 # global data
 from constants import *
+import asyncio
 
 # Helper classes and functions
 
@@ -57,6 +58,7 @@ class Application(Frame):
         self.progress = 0
         self.squeue = Queue()
         self.bqueue = Queue()
+        self.loop = asyncio.get_event_loop()
         self.build_gui()
         self.progressbar = ttk.Progressbar(self.master, orient='horizontal', mode='indeterminate')
         self.progressbar.pack(side=BOTTOM, fill=X, expand=1, anchor='s')
@@ -104,7 +106,7 @@ class Application(Frame):
             self.messbox = Pmw.MessageDialog(self.master, title='Batch download status', message_text=results, buttons=('Display', 'OK'), command=self.db_spread_display)
             self. messbox.activate(geometry='centerscreenfirst')
         except queue.Empty:
-            self.master.after(100, self.show_results)
+            self.master.after(100, self.show_batch_results)
 
     def execute_bdownload(self, button):
 
@@ -113,8 +115,8 @@ class Application(Frame):
             self.pword_dialog.activate(geometry='centerscreenfirst')
             self.bdownload.deactivate()
             self.progressbar.start()
-            self.t2 = threading.Thread(target=self.get_batch_results, kwargs={'queue': self.bqueue})
-            self.t2.start()
+            # place thread here
+            threading.Thread(target=self.get_batch_results, args=(self.bqueue,)).start()
             self.master.after(100, self.show_batch_results)
 
         else:
@@ -175,7 +177,7 @@ class Application(Frame):
         OptionMenu(self.sdownload.interior(), self.month, *months).pack(side=TOP, pady=10)
         self.year.set(2019)
         OptionMenu(self.sdownload.interior(), self.year, *years).pack(side=TOP, pady=10)
-        self.sdownload.activate(globalMode=1, geometry='centerscreenfirst')
+        self.sdownload.activate(geometry='centerscreenfirst')
 
     def show_about_dialog(self):
         Pmw.aboutversion('1.0')
