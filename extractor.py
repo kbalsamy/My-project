@@ -8,6 +8,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from bs4 import BeautifulSoup as BS
 from constants import *
+import logging
+import time
 
 
 def scrape(uname, pword, month, year):
@@ -83,7 +85,6 @@ def extract_values(uname, html, month, year, status):
     tablename = month + str(year)
     if html:
         final.append(uname)
-        print('extracting values for {}'.format(uname))
         soup = BS(html, "html.parser")
         tab = soup.find("ngx-datatable")
         headers = tab.find_all("span")
@@ -103,9 +104,12 @@ def extract_values(uname, html, month, year, status):
         exp = [val[8] for val in results]
         dif = [float(exp[i]) - float(imp[i]) for i in range(len(imp))]
         final.append(imp + exp + dif)
+        timestr = time.asctime()
+        logging.info('{} : Data fetched for {}'.format(timestr, uname))
         return final
     else:
-        print(status)
+        timestr = time.asctime()
+        logging.info(status)
         with open('failed summary.txt', 'a+') as file:
             file.write("{} failed to get values\n".format(uname))
             file.close()

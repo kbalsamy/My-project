@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup as BS
 import sqlite3
 from xlsxwriter import Workbook
 from constants import *
+import logging
+import time
 
 
 def db_connect():
@@ -95,7 +97,6 @@ def extract_values(ID, html, con, month, year, status):
     CID = ID
     tablename = month + str(year)
     if html:
-        print('extracting values for {}'.format(ID))
         final.append(ID)
         soup = BS(html, "html.parser")
         tab = soup.find("ngx-datatable")
@@ -116,6 +117,8 @@ def extract_values(ID, html, con, month, year, status):
         exp = [val[8] for val in results]
         dif = [float(exp[i]) - float(imp[i]) for i in range(len(imp))]
         final.append(imp + exp + dif)
+        timestr = time.asctime()
+        logging.info('{}:Data fetched values for {}'.format(timestr, ID))
         cursor = con.cursor()
         create_table = """CREATE TABLE IF NOT EXISTS {} (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, consumer TEXT, Connection TEXT, ImportUnits REAL, ExportUnits REAL, DifUnits REAL)""".format(tablename)
         cursor.execute(create_table)
@@ -123,11 +126,12 @@ def extract_values(ID, html, con, month, year, status):
             differnce = float(item[8]) - float(item[4])
             insert_values = """INSERT INTO {} (consumer, Connection, ImportUnits, ExportUnits, DifUnits) VALUES(?, ?, ?, ?, ?)""".format(tablename)
             cursor.execute(insert_values, (CID, item[0], float(item[4]), float(item[8]), differnce))
-            print('values updated into database for {}'.format(CID))
+            logging.info('{}:values updated into database for {}'.format(timestr, CID))
             con.commit()
 
     else:
-        print(status)
+        timestr = time.asctime()
+        logging.info(status)
         with open('failed summary.txt', 'a+') as file:
             file.write("{} failed to get values\n".format(CID))
             file.close()
@@ -137,3 +141,5 @@ def main(servicelist, pword, month, year):
     "tasks created"
     results = scrape(servicelist, pword, month, year)
     return results
+    timestr = time.asctime()
+    logging.info('{} Batch download is completed'.format(timestr))

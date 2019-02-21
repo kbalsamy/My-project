@@ -7,13 +7,14 @@ class Table_creator(Frame):
         Frame.__init__(self, window)
         self.window = window
         self.is_row = False
-        # self.window.geometry('800x100')
         self.config(bg='red')
         self.pack(fill=X)
         self.header = Frame(self, height=20, bg='red')
         self.header.pack(side=TOP, fill=BOTH, expand=1)
         self.row = Frame(self, height=20, bg='blue')
         self.row.pack(side=TOP, fill=BOTH, expand=1)
+        self.empty_frame = Frame(self, height=100)
+        self.empty_frame.pack(side=TOP, fill=BOTH, expand=1)
 
     def exim_table(self, name, single_header=True):
 
@@ -39,6 +40,8 @@ class Table_creator(Frame):
             status = StringVar()
             status.set(values)
             Entry(self.row, textvariable=status, state='readonly', bd=1, relief=SOLID, width=32).pack(side=LEFT, fill=BOTH, expand=1)
+            # Frame(self.row, height=140, bg='red').pack(side=TOP, fill=Y)
+
         else:
             s = StringVar()
             s.set(values[0])
@@ -48,6 +51,7 @@ class Table_creator(Frame):
                 v.set(val)
                 Entry(self.row, textvariable=v, state='readonly', bd=1, relief=SOLID, width=5).pack(side=LEFT, fill=BOTH, expand=1)
             self.is_row = True
+            # Frame(self.row, height=140, bg='red').pack(side=TOP, fill=Y)
 
 
 # main()

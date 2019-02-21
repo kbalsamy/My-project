@@ -2,6 +2,7 @@
 from tkinter import *
 from tkinter import filedialog
 from tkinter import ttk
+import tkinter.scrolledtext as ScrolledText
 import Pmw
 import Create_table_widget as Table
 import extractor
@@ -13,6 +14,9 @@ import time
 # global data
 from constants import *
 import asyncio
+import log
+import logging
+import file_creator as excel
 
 # Helper classes and functions
 
@@ -62,6 +66,16 @@ class Application(Frame):
         self.build_gui()
         self.progressbar = ttk.Progressbar(self.master, orient='horizontal', mode='indeterminate')
         self.progressbar.pack(side=BOTTOM, fill=X, expand=1, anchor='s')
+        self.working_frame = Frame(self.master, height=180)
+        self.working_frame.pack(side=TOP, fill=X)
+        self.log_window = ScrolledText.ScrolledText(self.master, state='disabled')
+        self.log_window.pack(side=BOTTOM, fill=X)
+        self.log_handler = log.TextHandler(self.log_window)
+        logging.basicConfig(filename='AMRapplication.log',
+                            level=logging.INFO,
+                            format='%(asctime)s - %(levelname)s - %(message)s')
+        logger = logging.getLogger()
+        logger.addHandler(self.log_handler)
 
     def move_window_pos(self, x, y):
         self.master.geometry('+{}+{}'.format(x, y))
@@ -70,8 +84,8 @@ class Application(Frame):
         frame.geometry('+{}+{}'.format(x, y))
 
     def clear_mainwindow(self):
-        children = self.master.winfo_children()
-        for wid in children[3:]:
+        children = self.working_frame.winfo_children()
+        for wid in children:
             wid.destroy()
         self.menubar.entryconfig('Single Download', state='active')
 
@@ -89,10 +103,18 @@ class Application(Frame):
 
     def db_spread_display(self, button):
         if button == 'Display':
-            print('connect db display here')
+            Message(self.master, text='Download is completed').pack()
         else:
             self.messbox.deactivate()
             self.menubar.entryconfig('Batch Download', state='active')
+
+    def file_to_save(self):
+        file = filedialog.asksaveasfile(mode='w', defaultextension=".xlsx")
+        if file is None:
+            return
+
+        d = excel.xldownloader(file)
+        Message(self.master, text='Download is completed').pack()
 
     def get_batch_results(self, queue):
         results = downloader.main(self.service_list, self.pword_dialog.get(), self.month.get(), self.year.get())
@@ -104,7 +126,12 @@ class Application(Frame):
             results = self.bqueue.get(0)
             self.progressbar.stop()
             self.messbox = Pmw.MessageDialog(self.master, title='Batch download status', message_text=results, buttons=('Display', 'OK'), command=self.db_spread_display)
-            self. messbox.activate(geometry='centerscreenfirst')
+            self.messbox.activate(geometry='centerscreenfirst')
+            timestr = time.asctime()
+            logging.info('{} Batch download is completed'.format(timestr))
+            b = Button(self.working_frame, text='Download', command=self.file_to_save)
+            b.pack()
+
         except queue.Empty:
             self.master.after(100, self.show_batch_results)
 
@@ -143,8 +170,8 @@ class Application(Frame):
         try:
             results = self.squeue.get(0)
             self.progressbar.stop()
-            Button(self.master, text='Clear', command=self.clear_mainwindow).pack()
-            manager = Table.Table_creator(self.master)
+            Button(self.working_frame, text='Clear', command=self.clear_mainwindow).pack()
+            manager = Table.Table_creator(self.working_frame)
             manager.exim_table('Service Number')
             manager.exim_table('Import Units', single_header=False)
             manager.exim_table('Export Units', single_header=False)
@@ -157,7 +184,7 @@ class Application(Frame):
         if button == 'Search':
             self.sdownload.deactivate()
             self.progressbar.start()
-            # self.squeue = Queue()
+            # add scroll text window here to display log messages
             self.t1 = threading.Thread(target=self.get_results, kwargs={'queue': self.squeue})
             self.t1.start()
             self.master.after(100, self.show_results)
