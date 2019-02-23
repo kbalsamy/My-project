@@ -18,6 +18,7 @@ import log
 import logging
 import file_creator as excel
 
+
 # Helper classes and functions
 
 
@@ -77,6 +78,10 @@ class Application(Frame):
         logger = logging.getLogger()
         logger.addHandler(self.log_handler)
 
+    def search_pane_gui(self):
+
+        pass
+
     def move_window_pos(self, x, y):
         self.master.geometry('+{}+{}'.format(x, y))
 
@@ -94,7 +99,6 @@ class Application(Frame):
         file = filedialog.askopenfilename()
         service_list = get_uname(file)
         self.service_list = service_list
-        # print(self.service_list)
 
     def show_progresss(self, max):
 
@@ -107,14 +111,18 @@ class Application(Frame):
         else:
             self.messbox.deactivate()
             self.menubar.entryconfig('Batch Download', state='active')
+# -------------------------------------------------------------------------------------------------------
 
     def file_to_save(self):
-        file = filedialog.asksaveasfile(mode='w', defaultextension=".xlsx")
-        if file is None:
+        filename = filedialog.asksaveasfilename(initialdir="/", title="Select file",
+                                                filetypes=(("Excel workbook", "*.xlsx"), ("all files", "*.*")))
+        # print(filename)
+        if filename is None:
             return
-
-        d = excel.xldownloader(file)
-        Message(self.master, text='Download is completed').pack()
+        tablename = self.month.get() + str(self.year.get())
+        d = excel.xldownloader("{}.xlsx".format(filename), tablename)
+        dialog = Pmw.MessageDialog(self.master, title='Download status', defaultbutton=0, buttons=('OK',),
+                                   message_text='Excel file download completed')
 
     def get_batch_results(self, queue):
         results = downloader.main(self.service_list, self.pword_dialog.get(), self.month.get(), self.year.get())
@@ -145,7 +153,6 @@ class Application(Frame):
             # place thread here
             threading.Thread(target=self.get_batch_results, args=(self.bqueue,)).start()
             self.master.after(100, self.show_batch_results)
-
         else:
             self.bdownload.deactivate()
 
@@ -160,6 +167,7 @@ class Application(Frame):
         self.year.set(2019)
         OptionMenu(self.bdownload.interior(), self.year, *years).pack()
         self.bdownload.activate(geometry='centerscreenfirst')
+# ------------------------------------------------------------------------------------------------------
 
     def get_results(self, queue=None):
         results = extractor.scrape(self.service_number.get(), self.service_password.get(), self.month.get(), self.year.get())

@@ -15,8 +15,8 @@ import time
 def scrape(uname, pword, month, year):
     " webdriver created here"
     options = Options()
-    options.headless = True
-    binary = FirefoxBinary("C:/Program Files/Firefox Nightly/firefox.exe")
+    options.headless = False
+    binary = FirefoxBinary("C:/Program Files/Mozilla Firefox/firefox.exe")
     driver = webdriver.Firefox(options=options, firefox_binary=binary)
     results = get_values(driver, url, uname, pword, month, year)
     return results

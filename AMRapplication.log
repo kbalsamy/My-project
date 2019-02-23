@@ -116,3 +116,179 @@
 2019-02-21 18:14:39,988 - INFO - Thu Feb 21 18:14:39 2019:values updated into database for 079204720584
 2019-02-21 18:14:39,996 - INFO - Thu Feb 21 18:14:39 2019:values updated into database for 079204720584
 2019-02-21 18:14:45,361 - INFO - Thu Feb 21 18:14:45 2019 Batch download is completed
+2019-02-21 21:39:15,070 - INFO - Check your network settings
+2019-02-21 21:39:16,101 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x06BA1970>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/92f8f731-2073-4cd4-8bc0-9fc2e1ddb500
+2019-02-21 21:39:17,132 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x06BA1830>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/92f8f731-2073-4cd4-8bc0-9fc2e1ddb500
+2019-02-21 21:39:18,163 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x06BA1B10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/92f8f731-2073-4cd4-8bc0-9fc2e1ddb500
+2019-02-21 21:39:34,394 - INFO - Thu Feb 21 21:39:34 2019 Batch download is completed
+2019-02-21 21:46:14,201 - INFO - Check your internet connection
+2019-02-21 21:46:49,949 - INFO - Check your internet connection
+2019-02-21 21:48:11,321 - INFO - Check your internet connection
+2019-02-21 21:48:30,066 - INFO - Check your internet connection
+2019-02-21 21:53:50,761 - INFO - Check your internet connection
+2019-02-21 22:03:54,723 - INFO - Thu Feb 21 22:03:54 2019 : Data fetched for 079204720584
+2019-02-21 22:04:42,493 - INFO - Thu Feb 21 22:04:42 2019:Data fetched values for 079204720584
+2019-02-21 22:04:42,540 - INFO - Thu Feb 21 22:04:42 2019:values updated into database for 079204720584
+2019-02-21 22:04:42,618 - INFO - Thu Feb 21 22:04:42 2019:values updated into database for 079204720584
+2019-02-21 22:04:42,696 - INFO - Thu Feb 21 22:04:42 2019:values updated into database for 079204720584
+2019-02-21 22:04:42,774 - INFO - Thu Feb 21 22:04:42 2019:values updated into database for 079204720584
+2019-02-21 22:04:42,884 - INFO - Thu Feb 21 22:04:42 2019:values updated into database for 079204720584
+2019-02-21 22:04:48,851 - INFO - Thu Feb 21 22:04:48 2019 Batch download is completed
+2019-02-21 22:09:27,965 - INFO - Thu Feb 21 22:09:27 2019:Data fetched values for 079204720584
+2019-02-21 22:09:32,745 - INFO - Thu Feb 21 22:09:32 2019 Batch download is completed
+2019-02-21 22:12:14,348 - INFO - Thu Feb 21 22:12:14 2019:Data fetched values for 079204720584
+2019-02-21 22:12:14,348 - INFO - Thu Feb 21 22:12:14 2019:values updated into database for 079204720584
+2019-02-21 22:12:14,473 - INFO - Thu Feb 21 22:12:14 2019:values updated into database for 079204720584
+2019-02-21 22:12:14,536 - INFO - Thu Feb 21 22:12:14 2019:values updated into database for 079204720584
+2019-02-21 22:12:14,614 - INFO - Thu Feb 21 22:12:14 2019:values updated into database for 079204720584
+2019-02-21 22:12:14,707 - INFO - Thu Feb 21 22:12:14 2019:values updated into database for 079204720584
+2019-02-21 22:12:21,378 - INFO - Thu Feb 21 22:12:21 2019 Batch download is completed
+2019-02-21 22:14:06,988 - INFO - Thu Feb 21 22:14:07 2019:Data fetched values for 079204720584
+2019-02-21 22:14:07,066 - INFO - Thu Feb 21 22:14:07 2019:values updated into database for 079204720584
+2019-02-21 22:14:07,175 - INFO - Thu Feb 21 22:14:07 2019:values updated into database for 079204720584
+2019-02-21 22:14:07,331 - INFO - Thu Feb 21 22:14:07 2019:values updated into database for 079204720584
+2019-02-21 22:14:07,472 - INFO - Thu Feb 21 22:14:07 2019:values updated into database for 079204720584
+2019-02-21 22:14:07,550 - INFO - Thu Feb 21 22:14:07 2019:values updated into database for 079204720584
+2019-02-21 22:14:13,642 - INFO - Thu Feb 21 22:14:13 2019 Batch download is completed
+2019-02-21 22:16:36,434 - INFO - Thu Feb 21 22:16:36 2019:Data fetched values for 079204720584
+2019-02-21 22:16:36,434 - INFO - Thu Feb 21 22:16:36 2019:values updated into database for 079204720584
+2019-02-21 22:16:36,574 - INFO - Thu Feb 21 22:16:36 2019:values updated into database for 079204720584
+2019-02-21 22:16:36,699 - INFO - Thu Feb 21 22:16:36 2019:values updated into database for 079204720584
+2019-02-21 22:16:36,856 - INFO - Thu Feb 21 22:16:36 2019:values updated into database for 079204720584
+2019-02-21 22:16:36,981 - INFO - Thu Feb 21 22:16:36 2019:values updated into database for 079204720584
+2019-02-21 22:16:42,011 - INFO - Thu Feb 21 22:16:42 2019 Batch download is completed
+2019-02-21 22:28:15,856 - INFO - Thu Feb 21 22:28:15 2019:Data fetched values for 079204720584
+2019-02-21 22:28:15,856 - INFO - Thu Feb 21 22:28:15 2019:values updated into database for 079204720584
+2019-02-21 22:28:15,997 - INFO - Thu Feb 21 22:28:15 2019:values updated into database for 079204720584
+2019-02-21 22:28:16,106 - INFO - Thu Feb 21 22:28:15 2019:values updated into database for 079204720584
+2019-02-21 22:28:16,200 - INFO - Thu Feb 21 22:28:15 2019:values updated into database for 079204720584
+2019-02-21 22:28:16,309 - INFO - Thu Feb 21 22:28:15 2019:values updated into database for 079204720584
+2019-02-21 22:28:21,027 - INFO - Thu Feb 21 22:28:21 2019 Batch download is completed
+2019-02-21 22:35:22,850 - INFO - Thu Feb 21 22:35:22 2019:Data fetched values for 079204720584
+2019-02-21 22:35:22,850 - INFO - Thu Feb 21 22:35:22 2019:values updated into database for 079204720584
+2019-02-21 22:35:23,037 - INFO - Thu Feb 21 22:35:22 2019:values updated into database for 079204720584
+2019-02-21 22:35:23,131 - INFO - Thu Feb 21 22:35:22 2019:values updated into database for 079204720584
+2019-02-21 22:35:23,240 - INFO - Thu Feb 21 22:35:22 2019:values updated into database for 079204720584
+2019-02-21 22:35:23,350 - INFO - Thu Feb 21 22:35:22 2019:values updated into database for 079204720584
+2019-02-21 22:35:27,864 - INFO - Thu Feb 21 22:35:27 2019 Batch download is completed
+2019-02-21 22:40:56,734 - INFO - Thu Feb 21 22:40:56 2019:Data fetched values for 079204720584
+2019-02-21 22:40:57,031 - INFO - Thu Feb 21 22:40:56 2019:values updated into database for 079204720584
+2019-02-21 22:40:57,297 - INFO - Thu Feb 21 22:40:56 2019:values updated into database for 079204720584
+2019-02-21 22:40:57,437 - INFO - Thu Feb 21 22:40:56 2019:values updated into database for 079204720584
+2019-02-21 22:40:57,609 - INFO - Thu Feb 21 22:40:56 2019:values updated into database for 079204720584
+2019-02-21 22:40:57,734 - INFO - Thu Feb 21 22:40:56 2019:values updated into database for 079204720584
+2019-02-21 22:41:03,248 - INFO - Thu Feb 21 22:41:03 2019 Batch download is completed
+2019-02-21 22:45:11,158 - INFO - Readings are not found for 079204720584.
+2019-02-21 22:45:15,594 - INFO - Thu Feb 21 22:45:15 2019 Batch download is completed
+2019-02-21 22:47:47,523 - INFO - consumer 079204720584 not found.
+2019-02-21 22:49:34,317 - INFO - Thu Feb 21 22:49:34 2019:Data fetched values for 079204720584
+2019-02-21 22:49:34,317 - INFO - Thu Feb 21 22:49:34 2019:values updated into database for 079204720584
+2019-02-21 22:49:34,474 - INFO - Thu Feb 21 22:49:34 2019:values updated into database for 079204720584
+2019-02-21 22:49:34,567 - INFO - Thu Feb 21 22:49:34 2019:values updated into database for 079204720584
+2019-02-21 22:49:34,677 - INFO - Thu Feb 21 22:49:34 2019:values updated into database for 079204720584
+2019-02-21 22:49:34,802 - INFO - Thu Feb 21 22:49:34 2019:values updated into database for 079204720584
+2019-02-21 22:49:40,238 - INFO - Thu Feb 21 22:49:40 2019 Batch download is completed
+2019-02-21 22:52:47,295 - INFO - Thu Feb 21 22:52:47 2019:Data fetched values for 079204720584
+2019-02-21 22:52:47,420 - INFO - Thu Feb 21 22:52:47 2019:values updated into database for 079204720584
+2019-02-21 22:52:47,529 - INFO - Thu Feb 21 22:52:47 2019:values updated into database for 079204720584
+2019-02-21 22:52:47,623 - INFO - Thu Feb 21 22:52:47 2019:values updated into database for 079204720584
+2019-02-21 22:52:47,732 - INFO - Thu Feb 21 22:52:47 2019:values updated into database for 079204720584
+2019-02-21 22:52:47,873 - INFO - Thu Feb 21 22:52:47 2019:values updated into database for 079204720584
+2019-02-21 22:52:53,528 - INFO - Thu Feb 21 22:52:53 2019 Batch download is completed
+2019-02-23 07:48:51,004 - INFO - Check your network settings
+2019-02-23 07:48:52,030 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x03340AB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c90e1d88-f21f-46bb-9b76-fd8d69fdacdc
+2019-02-23 07:48:53,062 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x07934D70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c90e1d88-f21f-46bb-9b76-fd8d69fdacdc
+2019-02-23 07:48:54,096 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x07934EB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c90e1d88-f21f-46bb-9b76-fd8d69fdacdc
+2019-02-23 07:49:03,461 - INFO - Sat Feb 23 07:49:03 2019 Batch download is completed
+2019-02-23 11:02:15,304 - INFO - Sat Feb 23 11:02:15 2019:Data fetched values for 079204720584
+2019-02-23 11:02:15,320 - INFO - Sat Feb 23 11:02:15 2019:values updated into database for 079204720584
+2019-02-23 11:02:15,461 - INFO - Sat Feb 23 11:02:15 2019:values updated into database for 079204720584
+2019-02-23 11:02:15,648 - INFO - Sat Feb 23 11:02:15 2019:values updated into database for 079204720584
+2019-02-23 11:02:15,789 - INFO - Sat Feb 23 11:02:15 2019:values updated into database for 079204720584
+2019-02-23 11:02:16,008 - INFO - Sat Feb 23 11:02:15 2019:values updated into database for 079204720584
+2019-02-23 11:02:20,194 - INFO - Sat Feb 23 11:02:20 2019 Batch download is completed
+2019-02-23 11:04:24,321 - INFO - Sat Feb 23 11:04:24 2019:Data fetched values for 079204720584
+2019-02-23 11:04:24,493 - INFO - Sat Feb 23 11:04:24 2019:values updated into database for 079204720584
+2019-02-23 11:04:24,696 - INFO - Sat Feb 23 11:04:24 2019:values updated into database for 079204720584
+2019-02-23 11:04:24,821 - INFO - Sat Feb 23 11:04:24 2019:values updated into database for 079204720584
+2019-02-23 11:04:24,977 - INFO - Sat Feb 23 11:04:24 2019:values updated into database for 079204720584
+2019-02-23 11:04:25,118 - INFO - Sat Feb 23 11:04:24 2019:values updated into database for 079204720584
+2019-02-23 11:04:35,178 - INFO - Sat Feb 23 11:04:35 2019 Batch download is completed
+2019-02-23 11:08:54,349 - INFO - Sat Feb 23 11:08:54 2019:Data fetched values for 079204720584
+2019-02-23 11:08:54,349 - INFO - Sat Feb 23 11:08:54 2019:values updated into database for 079204720584
+2019-02-23 11:08:54,505 - INFO - Sat Feb 23 11:08:54 2019:values updated into database for 079204720584
+2019-02-23 11:08:54,599 - INFO - Sat Feb 23 11:08:54 2019:values updated into database for 079204720584
+2019-02-23 11:08:54,708 - INFO - Sat Feb 23 11:08:54 2019:values updated into database for 079204720584
+2019-02-23 11:08:54,849 - INFO - Sat Feb 23 11:08:54 2019:values updated into database for 079204720584
+2019-02-23 11:09:03,675 - INFO - Sat Feb 23 11:09:03 2019 Batch download is completed
+2019-02-23 11:19:17,971 - INFO - Sat Feb 23 11:19:17 2019:Data fetched values for 079204720584
+2019-02-23 11:19:17,987 - INFO - Sat Feb 23 11:19:17 2019:values updated into database for 079204720584
+2019-02-23 11:19:18,049 - INFO - Sat Feb 23 11:19:17 2019:values updated into database for 079204720584
+2019-02-23 11:19:18,143 - INFO - Sat Feb 23 11:19:17 2019:values updated into database for 079204720584
+2019-02-23 11:19:18,237 - INFO - Sat Feb 23 11:19:17 2019:values updated into database for 079204720584
+2019-02-23 11:19:18,346 - INFO - Sat Feb 23 11:19:17 2019:values updated into database for 079204720584
+2019-02-23 11:19:22,954 - INFO - Sat Feb 23 11:19:22 2019 Batch download is completed
+2019-02-23 11:21:40,036 - INFO - Sat Feb 23 11:21:40 2019:Data fetched values for 079204720584
+2019-02-23 11:21:40,349 - INFO - Sat Feb 23 11:21:40 2019:values updated into database for 079204720584
+2019-02-23 11:21:40,568 - INFO - Sat Feb 23 11:21:40 2019:values updated into database for 079204720584
+2019-02-23 11:21:40,693 - INFO - Sat Feb 23 11:21:40 2019:values updated into database for 079204720584
+2019-02-23 11:21:40,864 - INFO - Sat Feb 23 11:21:40 2019:values updated into database for 079204720584
+2019-02-23 11:21:40,989 - INFO - Sat Feb 23 11:21:40 2019:values updated into database for 079204720584
+2019-02-23 11:21:44,785 - INFO - Sat Feb 23 11:21:44 2019 Batch download is completed
+2019-02-23 11:26:04,526 - INFO - Sat Feb 23 11:26:04 2019:Data fetched values for 079204720584
+2019-02-23 11:26:04,604 - INFO - Sat Feb 23 11:26:04 2019:values updated into database for 079204720584
+2019-02-23 11:26:04,744 - INFO - Sat Feb 23 11:26:04 2019:values updated into database for 079204720584
+2019-02-23 11:26:04,900 - INFO - Sat Feb 23 11:26:04 2019:values updated into database for 079204720584
+2019-02-23 11:26:05,135 - INFO - Sat Feb 23 11:26:04 2019:values updated into database for 079204720584
+2019-02-23 11:26:05,291 - INFO - Sat Feb 23 11:26:04 2019:values updated into database for 079204720584
+2019-02-23 11:26:10,712 - INFO - Sat Feb 23 11:26:10 2019 Batch download is completed
+2019-02-23 11:27:15,774 - INFO - Sat Feb 23 11:27:15 2019:Data fetched values for 079204720584
+2019-02-23 11:27:15,774 - INFO - Sat Feb 23 11:27:15 2019:values updated into database for 079204720584
+2019-02-23 11:27:15,884 - INFO - Sat Feb 23 11:27:15 2019:values updated into database for 079204720584
+2019-02-23 11:27:15,977 - INFO - Sat Feb 23 11:27:15 2019:values updated into database for 079204720584
+2019-02-23 11:27:16,165 - INFO - Sat Feb 23 11:27:15 2019:values updated into database for 079204720584
+2019-02-23 11:27:16,274 - INFO - Sat Feb 23 11:27:15 2019:values updated into database for 079204720584
+2019-02-23 11:27:20,554 - INFO - Sat Feb 23 11:27:20 2019 Batch download is completed
+2019-02-23 11:28:45,972 - INFO - Sat Feb 23 11:28:45 2019:Data fetched values for 079204720584
+2019-02-23 11:28:45,972 - INFO - Sat Feb 23 11:28:45 2019:values updated into database for 079204720584
+2019-02-23 11:28:46,175 - INFO - Sat Feb 23 11:28:45 2019:values updated into database for 079204720584
+2019-02-23 11:28:46,362 - INFO - Sat Feb 23 11:28:45 2019:values updated into database for 079204720584
+2019-02-23 11:28:46,456 - INFO - Sat Feb 23 11:28:45 2019:values updated into database for 079204720584
+2019-02-23 11:28:46,597 - INFO - Sat Feb 23 11:28:45 2019:values updated into database for 079204720584
+2019-02-23 11:28:52,174 - INFO - Sat Feb 23 11:28:52 2019 Batch download is completed
+2019-02-23 11:30:40,492 - INFO - Sat Feb 23 11:30:40 2019:Data fetched values for 079204720584
+2019-02-23 11:30:40,492 - INFO - Sat Feb 23 11:30:40 2019:values updated into database for 079204720584
+2019-02-23 11:30:40,695 - INFO - Sat Feb 23 11:30:40 2019:values updated into database for 079204720584
+2019-02-23 11:30:40,789 - INFO - Sat Feb 23 11:30:40 2019:values updated into database for 079204720584
+2019-02-23 11:30:40,898 - INFO - Sat Feb 23 11:30:40 2019:values updated into database for 079204720584
+2019-02-23 11:30:41,007 - INFO - Sat Feb 23 11:30:40 2019:values updated into database for 079204720584
+2019-02-23 11:30:45,428 - INFO - Sat Feb 23 11:30:45 2019 Batch download is completed
+2019-02-23 11:34:17,572 - INFO - Sat Feb 23 11:34:17 2019:Data fetched values for 079204720584
+2019-02-23 11:34:17,572 - INFO - Sat Feb 23 11:34:17 2019:values updated into database for 079204720584
+2019-02-23 11:34:17,713 - INFO - Sat Feb 23 11:34:17 2019:values updated into database for 079204720584
+2019-02-23 11:34:17,916 - INFO - Sat Feb 23 11:34:17 2019:values updated into database for 079204720584
+2019-02-23 11:34:18,103 - INFO - Sat Feb 23 11:34:17 2019:values updated into database for 079204720584
+2019-02-23 11:34:18,260 - INFO - Sat Feb 23 11:34:17 2019:values updated into database for 079204720584
+2019-02-23 11:34:22,399 - INFO - Sat Feb 23 11:34:22 2019 Batch download is completed
+2019-02-23 11:35:34,991 - INFO - Sat Feb 23 11:35:34 2019:Data fetched values for 079204720584
+2019-02-23 11:35:35,070 - INFO - Sat Feb 23 11:35:34 2019:values updated into database for 079204720584
+2019-02-23 11:35:35,195 - INFO - Sat Feb 23 11:35:34 2019:values updated into database for 079204720584
+2019-02-23 11:35:35,288 - INFO - Sat Feb 23 11:35:34 2019:values updated into database for 079204720584
+2019-02-23 11:35:35,367 - INFO - Sat Feb 23 11:35:34 2019:values updated into database for 079204720584
+2019-02-23 11:35:35,460 - INFO - Sat Feb 23 11:35:34 2019:values updated into database for 079204720584
+2019-02-23 11:35:39,194 - INFO - Sat Feb 23 11:35:39 2019 Batch download is completed
+2019-02-23 11:36:43,926 - INFO - Sat Feb 23 11:36:43 2019:Data fetched values for 079204720584
+2019-02-23 11:36:44,301 - INFO - Sat Feb 23 11:36:43 2019:values updated into database for 079204720584
+2019-02-23 11:36:44,411 - INFO - Sat Feb 23 11:36:43 2019:values updated into database for 079204720584
+2019-02-23 11:36:44,567 - INFO - Sat Feb 23 11:36:43 2019:values updated into database for 079204720584
+2019-02-23 11:36:44,770 - INFO - Sat Feb 23 11:36:43 2019:values updated into database for 079204720584
+2019-02-23 11:36:44,910 - INFO - Sat Feb 23 11:36:43 2019:values updated into database for 079204720584
+2019-02-23 11:36:49,862 - INFO - Sat Feb 23 11:36:49 2019 Batch download is completed
+2019-02-23 14:30:10,785 - INFO - Sat Feb 23 14:30:10 2019:Data fetched values for 079204720584
+2019-02-23 14:30:10,991 - INFO - Sat Feb 23 14:30:10 2019:values updated into database for 079204720584
+2019-02-23 14:30:11,141 - INFO - Sat Feb 23 14:30:10 2019:values updated into database for 079204720584
+2019-02-23 14:30:11,207 - INFO - Sat Feb 23 14:30:10 2019:values updated into database for 079204720584
+2019-02-23 14:30:11,284 - INFO - Sat Feb 23 14:30:10 2019:values updated into database for 079204720584
+2019-02-23 14:30:11,358 - INFO - Sat Feb 23 14:30:10 2019:values updated into database for 079204720584
+2019-02-23 14:30:16,856 - INFO - Sat Feb 23 14:30:16 2019 Batch download is completed
+2019-02-23 19:47:54,075 - INFO - Sat Feb 23 19:47:54 2019 : Data fetched for 079204720584

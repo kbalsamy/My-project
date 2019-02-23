@@ -24,7 +24,7 @@ def scrape(servicelist, pword, month, year):
     " webdriver created herewith "
     options = Options()
     options.headless = True
-    binary = FirefoxBinary("C:/Program Files/Firefox Nightly/firefox.exe")
+    binary = FirefoxBinary("C:/Program Files/Mozilla Firefox/firefox.exe")
     driver = webdriver.Firefox(options=options, firefox_binary=binary)
     batch = [servicelist[i:i + 15] for i in range(0, len(servicelist), 15)]
     for row in range(len(batch)):
@@ -86,8 +86,9 @@ def get_values(driver, url, ID, pword, month, year):
             results
 
     except (selenium.common.exceptions.WebDriverException, selenium.common.exceptions.TimeoutException) as e:
-        print("Check your network settings")
+        status = "Check your network settings"
         driver.quit()
+
         extract_values(ID, None, db_connect(), month, year, status)
 
 
